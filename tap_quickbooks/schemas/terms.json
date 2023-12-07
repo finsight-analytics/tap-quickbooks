@@ -6,18 +6,18 @@
         "string"
       ]
     },
-    "CustomerUid": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "DiscountPercent": {
       "type": [
         "null",
         "string"
       ],
       "format": "singer.decimal"
+    },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "DayOfMonthDue": {
       "type": [

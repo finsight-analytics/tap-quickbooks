@@ -14,17 +14,17 @@
         "object"
       ]
     },
-    "PaymentMethodRef": {
-      "$ref": "shared/ref_schema.json"
-    },
-    "CustomerRef": {
-      "$ref": "shared/ref_schema.json"
-    },
     "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
+    },
+    "PaymentMethodRef": {
+      "$ref": "shared/ref_schema.json"
+    },
+    "CustomerRef": {
+      "$ref": "shared/ref_schema.json"
     },
     "SyncToken": {
       "type": [

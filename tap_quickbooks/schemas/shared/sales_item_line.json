@@ -3,14 +3,14 @@
     "ClassRef": {
       "$ref": "shared/ref_schema.json"
     },
-    "DiscountAmt": {
-      "format": "singer.decimal",
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "DiscountAmt": {
+      "format": "singer.decimal",
       "type": [
         "null",
         "string"

@@ -6,6 +6,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "TaxRegistrationNumber": {
       "type": [
         "null",
@@ -19,12 +25,6 @@
       ]
     },
     "SyncToken": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "CustomerUid": {
       "type": [
         "null",
         "string"

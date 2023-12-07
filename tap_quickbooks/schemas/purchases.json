@@ -10,13 +10,13 @@
         "string"
       ]
     },
-    "PaymentType": {
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "PaymentType": {
       "type": [
         "null",
         "string"

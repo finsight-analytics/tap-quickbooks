@@ -7,14 +7,14 @@
     "APAccountRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "DepartmentRef": {
+      "$ref": "shared/ref_schema.json"
+    },
     "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
-    },
-    "DepartmentRef": {
-      "$ref": "shared/ref_schema.json"
     },
     "CheckPayment": {
       "type": [

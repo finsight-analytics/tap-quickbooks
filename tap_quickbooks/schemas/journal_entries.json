@@ -9,6 +9,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "CurrencyRef": {
       "$ref": "shared/ref_schema.json"
     },
@@ -19,12 +25,6 @@
       ]
     },
     "domain": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "CustomerUid": {
       "type": [
         "null",
         "string"

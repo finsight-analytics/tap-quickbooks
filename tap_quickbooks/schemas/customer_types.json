@@ -12,13 +12,13 @@
         "string"
       ]
     },
-    "CustomerUid": {
+    "Name": {
       "type": [
         "null",
         "string"
       ]
     },
-    "Name": {
+    "CustomerUid": {
       "type": [
         "null",
         "string"

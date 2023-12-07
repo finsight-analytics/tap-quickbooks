@@ -6,13 +6,13 @@
         "string"
       ]
     },
-    "Id": {
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "Id": {
       "type": [
         "null",
         "string"

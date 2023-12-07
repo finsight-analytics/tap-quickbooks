@@ -3,6 +3,12 @@
     "IncomeAccountRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "PurchaseDesc": {
       "type": [
         "null",
@@ -14,12 +20,6 @@
     },
     "InvStartDate": {
       "format": "date-time",
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "CustomerUid": {
       "type": [
         "null",
         "string"

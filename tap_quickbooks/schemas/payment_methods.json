@@ -10,13 +10,13 @@
         "string"
       ]
     },
-    "domain": {
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "domain": {
       "type": [
         "null",
         "string"

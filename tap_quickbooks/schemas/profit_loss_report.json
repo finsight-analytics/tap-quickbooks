@@ -11,13 +11,13 @@
       ],
       "format": "date-time"
     },
-    "AccountingMethod": {
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "AccountingMethod": {
       "type": [
         "null",
         "string"

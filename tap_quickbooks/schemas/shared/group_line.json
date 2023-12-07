@@ -3,14 +3,14 @@
     "GroupItemRef": {
       "$ref": "shared/ref_schema.json"
     },
-    "Quantity": {
-      "format": "singer.decimal",
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "Quantity": {
+      "format": "singer.decimal",
       "type": [
         "null",
         "string"

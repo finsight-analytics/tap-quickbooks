@@ -10,7 +10,6 @@ DATE_WINDOW_SIZE = 29
 
 LOGGER = singer.get_logger()
 
-
 class Stream:
     endpoint = '/v3/company/{realm_id}/query'
     key_properties = ['Id']
@@ -26,31 +25,27 @@ class Stream:
         self.config = config
         self.state = state
 
+
     def sync(self):
         start_position = 1
         max_results = int(self.config.get('max_results', '200'))
-        customer_uid = self.config.get('customer_uid')
 
-        bookmark = singer.get_bookmark(
-            self.state, self.stream_name, 'LastUpdatedTime', self.config.get('start_date'))
+        bookmark = singer.get_bookmark(self.state, self.stream_name, 'LastUpdatedTime', self.config.get('start_date'))
 
         while True:
-            query = query_builder.build_query(
-                self.table_name, bookmark, start_position, max_results, additional_where=self.additional_where)
+            query = query_builder.build_query(self.table_name, bookmark, start_position, max_results, additional_where=self.additional_where)
 
-            resp = self.client.get(self.endpoint, params={
-                                   "query": query, "minorversion": self.client.minor_version}).get('QueryResponse', {})
-            print("############# near rec table")
+            resp = self.client.get(self.endpoint, params={"query": query,"minorversion": self.client.minor_version}).get('QueryResponse',{})
+
             results = resp.get(self.table_name, [])
-            print(results)
+            
+            
             for rec in results:
                 rec["CustomerUid"] = self.config.get("customer_uid")
-                # LOGGER.info("rec logging in streams: %s", rec)
                 yield rec
 
             if results:
-                self.state = singer.write_bookmark(
-                    self.state, self.stream_name, 'LastUpdatedTime', rec.get('MetaData').get('LastUpdatedTime'))
+                self.state = singer.write_bookmark(self.state, self.stream_name, 'LastUpdatedTime', rec.get('MetaData').get('LastUpdatedTime'))
                 singer.write_state(self.state)
 
             if len(results) < max_results:
@@ -138,7 +133,7 @@ class Customers(Stream):
 
 class CustomerTypes(Stream):
     stream_name = 'customer_types'
-    table_name = 'CustomerType'
+    table_name  = 'CustomerType'
 
 
 class RefundReceipts(Stream):
@@ -216,7 +211,6 @@ class Vendors(Stream):
     table_name = 'Vendor'
     additional_where = "Active IN (true, false)"
 
-
 class ReportStream(Stream):
     parsed_metadata = {
         'dates': [],
@@ -235,8 +229,7 @@ class ReportStream(Stream):
         }
 
         # Get bookmark for the stream
-        start_dttm_str = singer.get_bookmark(
-            self.state, self.stream_name, 'LastUpdatedTime')
+        start_dttm_str = singer.get_bookmark(self.state, self.stream_name, 'LastUpdatedTime')
         if start_dttm_str is None:
             start_dttm_str = self.config.get('start_date')
             is_start_date_used = True
@@ -270,23 +263,18 @@ class ReportStream(Stream):
             params["end_date"] = end_tm_str
 
             resp = self.client.get(self.endpoint, params=params)
-            # parse report columns from response's metadata
-            self.parse_report_columns(resp.get('Columns', {}))
-            # parse report rows from response's metadata
-            self.parse_report_rows(resp.get('Rows', {}))
+            self.parse_report_columns(resp.get('Columns', {})) # parse report columns from response's metadata
+            self.parse_report_rows(resp.get('Rows', {})) # parse report rows from response's metadata
 
-            # get reports for every days from parsed metadata
-            reports = self.day_wise_reports()
-            if reports:  # pylint: disable=using-constant-test
+            reports = self.day_wise_reports() # get reports for every days from parsed metadata
+            if reports: # pylint: disable=using-constant-test
                 for report in reports:
                     yield report
-                self.state = singer.write_bookmark(self.state, self.stream_name, 'LastUpdatedTime', strptime_to_utc(
-                    report.get('ReportDate')).isoformat())
+                self.state = singer.write_bookmark(self.state, self.stream_name, 'LastUpdatedTime', strptime_to_utc(report.get('ReportDate')).isoformat())
                 singer.write_state(self.state)
 
             # Set start_date and end_date of date window for next API call
-            # one record is emitted for every day so start from next day
-            start_dttm = end_dttm + timedelta(days=1)
+            start_dttm = end_dttm + timedelta(days=1) # one record is emitted for every day so start from next day
             end_dttm = start_dttm + timedelta(days=DATE_WINDOW_SIZE)
 
             if end_dttm > now_dttm:
@@ -371,11 +359,9 @@ class ReportStream(Stream):
 
             yield report
 
-
 class ProfitAndLossReport(ReportStream):
     stream_name = 'profit_loss_report'
     endpoint = '/v3/company/{realm_id}/reports/ProfitAndLoss'
-
 
 class DeletedObjects(Stream):
     endpoint = '/v3/company/{realm_id}/cdc'
@@ -394,8 +380,7 @@ class DeletedObjects(Stream):
 
     def sync(self):
 
-        bookmark = singer.get_bookmark(
-            self.state, self.stream_name, 'LastUpdatedTime', self.config.get('start_date'))
+        bookmark = singer.get_bookmark(self.state, self.stream_name, 'LastUpdatedTime', self.config.get('start_date'))
         self.max_date = bookmark
         params = {
             'entities': ','.join(self.deleted_entities),
@@ -403,8 +388,7 @@ class DeletedObjects(Stream):
         }
 
         # Get change tracking for all the entities in single call
-        resp = self.client.get(self.endpoint, params=params).get(
-            'CDCResponse', [{}])[0].get('QueryResponse', [{}])
+        resp = self.client.get(self.endpoint, params=params).get('CDCResponse',[{}])[0].get('QueryResponse', [{}])
 
         # Calculate number of objects found in response
         total_objects = 0
@@ -425,14 +409,12 @@ class DeletedObjects(Stream):
                     'entities': entity,
                     'changedSince': bookmark
                 }
-                resp = self.client.get(self.endpoint, params=params).get(
-                    'CDCResponse', [{}])[0].get('QueryResponse', [{}])
+                resp = self.client.get(self.endpoint, params=params).get('CDCResponse',[{}])[0].get('QueryResponse', [{}])
                 yield from self.parse_data_and_write(resp)
 
         # Write bookmark if any deleted object found
         if self.is_deleted_object_found:
-            self.state = singer.write_bookmark(
-                self.state, self.stream_name, 'LastUpdatedTime', self.max_date)
+            self.state = singer.write_bookmark(self.state, self.stream_name, 'LastUpdatedTime', self.max_date)
 
         singer.write_state(self.state)
 
@@ -447,8 +429,7 @@ class DeletedObjects(Stream):
                         if rec.get('status', None) == 'Deleted':
                             self.is_deleted_object_found = True
                             rec['Type'] = entity
-                            self.max_date = max(self.max_date, rec.get(
-                                'MetaData').get('LastUpdatedTime'))
+                            self.max_date = max(self.max_date, rec.get('MetaData').get('LastUpdatedTime'))
                             yield rec
 
 

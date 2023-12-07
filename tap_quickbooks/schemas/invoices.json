@@ -6,6 +6,12 @@
         "boolean"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "CustomerRef": {
       "$ref": "shared/ref_schema.json"
     },
@@ -13,12 +19,6 @@
       "$ref": "shared/address.json"
     },
     "DocNumber": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "CustomerUid": {
       "type": [
         "null",
         "string"

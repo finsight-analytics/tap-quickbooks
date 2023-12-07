@@ -14,14 +14,14 @@
         "object"
       ]
     },
-    "BillAddr": {
-      "$ref": "shared/address.json"
-    },
     "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
+    },
+    "BillAddr": {
+      "$ref": "shared/address.json"
     },
     "TxnStatus": {
       "type": [

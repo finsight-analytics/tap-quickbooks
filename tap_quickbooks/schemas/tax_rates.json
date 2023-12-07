@@ -6,13 +6,13 @@
         "string"
       ]
     },
-    "SyncToken": {
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "SyncToken": {
       "type": [
         "null",
         "string"

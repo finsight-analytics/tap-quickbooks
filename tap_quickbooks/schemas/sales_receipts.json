@@ -14,6 +14,12 @@
     "CustomerRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "LinkedTxn": {
       "$ref": "shared/linked_txn.json"
     },
@@ -21,12 +27,6 @@
       "type": [
         "null",
         "boolean"
-      ]
-    },
-    "CustomerUid": {
-      "type": [
-        "null",
-        "string"
       ]
     },
     "PaymentRefNum": {

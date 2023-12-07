@@ -7,13 +7,13 @@
         "string"
       ]
     },
-    "AcctNum": {
+    "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
     },
-    "CustomerUid": {
+    "AcctNum": {
       "type": [
         "null",
         "string"

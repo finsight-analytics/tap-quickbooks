@@ -3,14 +3,14 @@
     "DepartmentRef": {
       "$ref": "shared/ref_schema.json"
     },
-    "CurrencyRef": {
-      "$ref": "shared/ref_schema.json"
-    },
     "CustomerUid": {
       "type": [
         "null",
         "string"
       ]
+    },
+    "CurrencyRef": {
+      "$ref": "shared/ref_schema.json"
     },
     "CashBack": {
       "properties": {

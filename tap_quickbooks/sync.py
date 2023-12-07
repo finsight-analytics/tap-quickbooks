@@ -5,7 +5,6 @@ from .streams import STREAM_OBJECTS
 
 LOGGER = singer.get_logger()
 
-
 def do_sync(client, config, state, catalog):
     selected_streams = catalog.get_selected_streams(state)
 
@@ -15,8 +14,7 @@ def do_sync(client, config, state, catalog):
         stream_object = STREAM_OBJECTS.get(stream_id)
 
         if stream_object is None:
-            raise Exception(
-                "Attempted to sync unknown stream {}".format(stream_id))
+            raise Exception("Attempted to sync unknown stream {}".format(stream_id))
 
         stream_object = stream_object(client, config, state)
         singer.write_schema(
@@ -26,14 +24,13 @@ def do_sync(client, config, state, catalog):
             stream_object.replication_keys,
         )
 
-        LOGGER.info("Syncing stream 5: %s", stream_id)
+        LOGGER.info("Syncing stream 6: %s", stream_id)
         state = singer.set_currently_syncing(state, stream_id)
         singer.write_state(state)
 
         with Transformer() as transformer:
             for rec in stream_object.sync():
                 rec["CustomerUid"] = config.get('customer_uid')
-                # LOGGER.info("rec logging in sync: %s", rec)
                 singer.write_record(
                     stream_id,
                     transformer.transform(rec,

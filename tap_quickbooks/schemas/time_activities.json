@@ -9,16 +9,16 @@
     "CustomerRef": {
       "$ref": "shared/ref_schema.json"
     },
-    "CustomerUid": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
     "Taxable": {
       "type": [
         "null",
         "boolean"
+      ]
+    },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
       ]
     },
     "Description": {
