@@ -22,6 +22,12 @@
         "object"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "ExchangeRate": {
       "type": [
         "null",

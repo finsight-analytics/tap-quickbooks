@@ -6,6 +6,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "PrimaryPhone": {
       "properties": {
         "FreeFormNumber": {
@@ -324,7 +330,9 @@
         "boolean"
       ]
     },
-    "patternProperties": {".+": {}}
+    "patternProperties": {
+      ".+": {}
+    }
   },
   "type": [
     "null",

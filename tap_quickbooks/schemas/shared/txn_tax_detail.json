@@ -2,20 +2,35 @@
   "properties": {
     "TotalTax": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "TxnTaxCodeRef": {
       "$ref": "shared/ref_schema.json"
+    },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "TaxLine": {
       "items": {
         "properties": {
           "DetailType": {
-            "type": ["null", "string"]
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "Amount": {
             "format": "singer.decimal",
-            "type": ["null", "string"]
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "TaxLineDetail": {
             "properties": {
@@ -24,31 +39,58 @@
               },
               "NetAmountTaxable": {
                 "format": "singer.decimal",
-                "type": ["null", "string"]
+                "type": [
+                  "null",
+                  "string"
+                ]
               },
               "PercentBased": {
-                "type": ["null", "boolean"]
+                "type": [
+                  "null",
+                  "boolean"
+                ]
               },
               "TaxInclusiveAmount": {
                 "format": "singer.decimal",
-                "type": ["null", "string"]
+                "type": [
+                  "null",
+                  "string"
+                ]
               },
               "OverrideDeltaAmount": {
                 "format": "singer.decimal",
-                "type": ["null", "string"]
+                "type": [
+                  "null",
+                  "string"
+                ]
               },
               "TaxPercent": {
                 "format": "singer.decimal",
-                "type": ["null", "string"]
+                "type": [
+                  "null",
+                  "string"
+                ]
               }
             },
-            "type": ["null", "object"]
+            "type": [
+              "null",
+              "object"
+            ]
           }
         },
-        "type": ["null", "object"]
+        "type": [
+          "null",
+          "object"
+        ]
       },
-      "type": ["null", "array"]
+      "type": [
+        "null",
+        "array"
+      ]
     }
   },
-  "type": ["null", "object"]
+  "type": [
+    "null",
+    "object"
+  ]
 }

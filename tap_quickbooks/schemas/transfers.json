@@ -6,6 +6,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "MetaData": {
       "properties": {
         "LastUpdatedTime": {

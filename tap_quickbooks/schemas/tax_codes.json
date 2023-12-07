@@ -6,6 +6,12 @@
         "boolean"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "PurchaseTaxRateList": {
       "type": [
         "null",

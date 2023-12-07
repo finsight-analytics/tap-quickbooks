@@ -17,6 +17,12 @@
         "object"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "EmailStatus": {
       "type": [
         "null",
@@ -165,7 +171,7 @@
     },
     "CustomField": {
       "items": {
-          "$ref": "shared/custom_field.json"
+        "$ref": "shared/custom_field.json"
       },
       "type": [
         "null",
@@ -263,7 +269,9 @@
         "string"
       ]
     },
-    "patternProperties": {".+": {}}
+    "patternProperties": {
+      ".+": {}
+    }
   },
   "type": [
     "null",

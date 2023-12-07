@@ -7,6 +7,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "PrimaryPhone": {
       "properties": {
         "FreeFormNumber": {

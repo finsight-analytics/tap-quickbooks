@@ -19,6 +19,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "Name": {
       "type": [
         "null",
@@ -224,7 +230,9 @@
         "string"
       ]
     },
-    "patternProperties": {".+": {}}
+    "patternProperties": {
+      ".+": {}
+    }
   },
   "type": [
     "null",

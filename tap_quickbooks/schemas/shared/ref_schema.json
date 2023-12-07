@@ -6,6 +6,12 @@
                 "string"
             ]
         },
+        "CustomerUid": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
         "value": {
             "type": [
                 "null",

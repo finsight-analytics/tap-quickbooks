@@ -12,6 +12,12 @@
     "CurrencyRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "SyncToken": {
       "type": [
         "null",

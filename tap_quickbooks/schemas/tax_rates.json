@@ -12,6 +12,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "AgencyRef": {
       "$ref": "shared/ref_schema.json"
     },

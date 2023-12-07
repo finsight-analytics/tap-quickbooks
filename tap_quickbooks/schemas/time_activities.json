@@ -9,6 +9,12 @@
     "CustomerRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "Taxable": {
       "type": [
         "null",
@@ -149,7 +155,9 @@
       ],
       "format": "singer.decimal"
     },
-    "patternProperties": {".+": {}}
+    "patternProperties": {
+      ".+": {}
+    }
   },
   "type": [
     "null",

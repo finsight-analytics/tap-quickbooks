@@ -24,6 +24,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "SyncToken": {
       "type": [
         "null",
@@ -132,7 +138,10 @@
           },
           "LineNum": {
             "format": "singer.decimal",
-            "type": ["null", "string"]
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "DescriptionLineDetail": {
             "$ref": "shared/description_line.json"

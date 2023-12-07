@@ -3,6 +3,12 @@
     "ClassRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "TaxCodeRef": {
       "$ref": "shared/ref_schema.json"
     },
@@ -10,12 +16,21 @@
       "$ref": "shared/ref_schema.json"
     },
     "PercentBased": {
-      "type": ["null", "boolean"]
+      "type": [
+        "null",
+        "boolean"
+      ]
     },
     "DiscountPercent": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     }
   },
-  "type": ["null", "object"]
+  "type": [
+    "null",
+    "object"
+  ]
 }

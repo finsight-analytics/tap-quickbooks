@@ -2,7 +2,16 @@
   "properties": {
     "TaxInclusiveAmt": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "ItemRef": {
       "$ref": "shared/ref_schema.json"
@@ -20,14 +29,20 @@
       "$ref": "shared/ref_schema.json"
     },
     "MarkupInfo": {
-      "type": ["null", "object"],
+      "type": [
+        "null",
+        "object"
+      ],
       "properties": {
         "MarkUpIncomeAccountRef": {
           "$ref": "shared/ref_schema.json"
         },
         "Percent": {
           "format": "singer.decimal",
-          "type": ["null", "string"]
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "PriceLevelRef": {
           "$ref": "shared/ref_schema.json"
@@ -35,15 +50,27 @@
       }
     },
     "BillableStatus": {
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "Qty": {
-      "type": ["null", "integer"]
+      "type": [
+        "null",
+        "integer"
+      ]
     },
     "UnitPrice": {
-      "type": ["null", "string"],
+      "type": [
+        "null",
+        "string"
+      ],
       "format": "singer.decimal"
     }
   },
-  "type": ["null", "object"]
+  "type": [
+    "null",
+    "object"
+  ]
 }

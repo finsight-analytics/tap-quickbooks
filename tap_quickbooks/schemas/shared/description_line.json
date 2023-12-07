@@ -3,10 +3,22 @@
     "TaxCodeRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "ServiceDate": {
       "format": "date-time",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     }
   },
-  "type": ["null", "object"]
+  "type": [
+    "null",
+    "object"
+  ]
 }

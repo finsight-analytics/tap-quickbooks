@@ -20,6 +20,12 @@
     "CustomerRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "SyncToken": {
       "type": [
         "null",
@@ -91,7 +97,10 @@
     },
     "Balance": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "TxnTaxDetail": {
       "$ref": "shared/txn_tax_detail.json"
@@ -168,7 +177,7 @@
     },
     "CustomField": {
       "items": {
-          "$ref": "shared/custom_field.json"
+        "$ref": "shared/custom_field.json"
       },
       "type": [
         "null",
@@ -405,7 +414,9 @@
         "boolean"
       ]
     },
-    "patternProperties": {".+": {}}
+    "patternProperties": {
+      ".+": {}
+    }
   },
   "type": [
     "null",

@@ -2,16 +2,37 @@
   "items": {
     "properties": {
       "TxnId": {
-        "type": ["null", "string"]
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "CustomerUid": {
+        "type": [
+          "null",
+          "string"
+        ]
       },
       "TxnType": {
-        "type": ["null", "string"]
+        "type": [
+          "null",
+          "string"
+        ]
       },
       "TxnLineId": {
-        "type": ["null", "string"]
+        "type": [
+          "null",
+          "string"
+        ]
       }
     },
-    "type": ["null", "object"]
+    "type": [
+      "null",
+      "object"
+    ]
   },
-  "type": ["null", "array"]
+  "type": [
+    "null",
+    "array"
+  ]
 }

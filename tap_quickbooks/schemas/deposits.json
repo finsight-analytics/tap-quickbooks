@@ -6,6 +6,12 @@
     "CurrencyRef": {
       "$ref": "shared/ref_schema.json"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "CashBack": {
       "properties": {
         "AccountRef": {

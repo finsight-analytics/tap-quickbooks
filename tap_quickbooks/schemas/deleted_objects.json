@@ -1,42 +1,47 @@
 {
-    "properties": {
-      "Type": {
-        "type": [
-          "null",
-          "string"
-        ]
-      },
-      "domain": {
-        "type": [
-          "null",
-          "string"
-        ]
-      },
-      "Id": {
-        "type": [
-          "null",
-          "string"
-        ]
-      },
-      "MetaData": {
-        "properties": {
-          "LastUpdatedTime": {
-            "format": "date-time",
-            "type": [
-              "null",
-              "string"
-            ]
-          }
-        },
-        "type": [
-          "null",
-          "object"
-        ]
-      }
+  "properties": {
+    "Type": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
-    "type": [
-      "null",
-      "object"
-    ]
-  }
-  
+    "domain": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "Id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "MetaData": {
+      "properties": {
+        "LastUpdatedTime": {
+          "format": "date-time",
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "type": [
+        "null",
+        "object"
+      ]
+    }
+  },
+  "type": [
+    "null",
+    "object"
+  ]
+}

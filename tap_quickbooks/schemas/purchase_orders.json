@@ -17,6 +17,12 @@
       ],
       "format": "date-time"
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "PrivateNote": {
       "type": [
         "null",
@@ -76,7 +82,7 @@
     },
     "CustomField": {
       "items": {
-          "$ref": "shared/custom_field.json"
+        "$ref": "shared/custom_field.json"
       },
       "type": [
         "null",

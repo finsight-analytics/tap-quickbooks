@@ -24,6 +24,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "TaxTrackedOnPurchases": {
       "type": [
         "null",

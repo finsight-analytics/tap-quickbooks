@@ -6,7 +6,10 @@
   "properties": {
     "Balance": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "CustomerRef": {
       "$ref": "shared/ref_schema.json"
@@ -18,6 +21,12 @@
       "type": [
         "null",
         "boolean"
+      ]
+    },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
       ]
     },
     "PaymentRefNum": {
@@ -65,7 +74,7 @@
     },
     "CustomField": {
       "items": {
-          "$ref": "shared/custom_field.json"
+        "$ref": "shared/custom_field.json"
       },
       "type": [
         "null",
@@ -411,6 +420,8 @@
         "boolean"
       ]
     },
-    "patternProperties": {".+": {}}
+    "patternProperties": {
+      ".+": {}
+    }
   }
 }

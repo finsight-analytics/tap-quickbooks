@@ -16,6 +16,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "MetaData": {
       "type": [
         "null",
@@ -174,7 +180,10 @@
           },
           "LineNum": {
             "format": "singer.decimal",
-            "type": ["null", "string"]
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       }
@@ -299,6 +308,8 @@
     "TxnTaxDetail": {
       "$ref": "shared/txn_tax_detail.json"
     },
-    "patternProperties": {".+": {}}
+    "patternProperties": {
+      ".+": {}
+    }
   }
 }

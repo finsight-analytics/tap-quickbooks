@@ -5,11 +5,23 @@
     },
     "DiscountAmt": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "DiscountRate": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "ItemAccountRef": {
       "$ref": "shared/ref_schema.json"
@@ -18,14 +30,20 @@
       "$ref": "shared/ref_schema.json"
     },
     "MarkupInfo": {
-      "type": ["null", "object"],
+      "type": [
+        "null",
+        "object"
+      ],
       "properties": {
         "MarkUpIncomeAccountRef": {
           "$ref": "shared/ref_schema.json"
         },
         "Percent": {
           "format": "singer.decimal",
-          "type": ["null", "string"]
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "PriceLevelRef": {
           "$ref": "shared/ref_schema.json"
@@ -33,11 +51,17 @@
       }
     },
     "Qty": {
-      "type": ["null", "integer"]
+      "type": [
+        "null",
+        "integer"
+      ]
     },
     "ServiceDate": {
       "format": "date-time",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "TaxClassificationRef": {
       "$ref": "shared/ref_schema.json"
@@ -47,12 +71,21 @@
     },
     "TaxInclusiveAmt": {
       "format": "singer.decimal",
-      "type": ["null", "string"]
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "UnitPrice": {
-      "type": ["null", "string"],
+      "type": [
+        "null",
+        "string"
+      ],
       "format": "singer.decimal"
     }
   },
-  "type": ["null", "object"]
+  "type": [
+    "null",
+    "object"
+  ]
 }

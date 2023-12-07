@@ -16,6 +16,12 @@
         "string"
       ]
     },
+    "CustomerUid": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "MetaData": {
       "type": [
         "null",
